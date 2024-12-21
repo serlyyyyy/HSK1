@@ -1,0 +1,65 @@
+<head>
+  <style>
+    button {
+      font-family: 'Arial', sans-serif;
+      font-size: 18px;
+      font-weight: bold;
+      color: white;
+      background: linear-gradient(45deg, #9b1b30, #a94e6e);
+      padding: 12px 30px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s, box-shadow 0.3s;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    button:active {
+      transform: scale(0.98);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+        body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      color: #333;
+      text-align: center;
+
+      /* Background */
+      background-image: url('gambarhome.jpg'); /* Pastikan nama file lengkap */
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+
+      /* Overlay transparansi */
+      background-color: rgba(255, 255, 255, 0.2);
+      background-blend-mode: lighten;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Tombol yang menggunakan JavaScript untuk mengarahkan -->
+  <button onclick="goToLesson(1)">Lesson 1</button>
+  <button onclick="goToLesson(2)">Lesson 2</button>
+  <button onclick="goToLesson(3)">Lesson 3</button>
+  <button  onclick="goToLesson(4)">Lesson 4</button>
+  <button onclick="goToHome()">Home</button>
+
+  <script>
+    function goToLesson(lessonNumber) {
+      // Mengarahkan ke halaman pelajaran sesuai dengan nomor pelajaran
+      window.location.href = 'hsk1_lesson' + lessonNumber + '.html';
+    }
+
+    function goToHome() {
+      // Mengarahkan ke halaman home
+      window.location.href = 'home.html';
+    }
+  </script>
+</body>
